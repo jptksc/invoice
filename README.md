@@ -1,4 +1,4 @@
-# invoice
+# Invoice
 A simple flat-file invoicing solution for Stripe.
 
 ![Alt text](screenshot.jpg?raw=true)
@@ -10,7 +10,7 @@ Invoice is a complete invoicing solution that allows you to create any number in
 ## Setup & Installation
 
 1. Configure your "Invoice", "Currency" and "Stripe" settings within "settings.php".
-2. Upload to your server (SSL required).
+2. Upload to any PHP compatible server (SSL required).
 
 ## Creating Clients
 
@@ -41,7 +41,7 @@ Now that you’ve created at least one client and at least one invoice, you can 
 
 ## Services
 
-If you need help developing the functionality you need for your own site, I'm available for hire to help you with whatever customization or implementation services you might need. To get started, just send me an email (hi@leeflets.com).
+If you need help developing the functionality you need for your own site, I'm available for hire to help you with whatever customization or implementation services you might need. To get started, just send me an email (jason@circa75.co).
 
 ## Version 1.0
 
