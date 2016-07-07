@@ -1,0 +1,670 @@
+
+/***********************************************************************************
+  
+Setup
+  
+************************************************************************************/
+
+body {
+    background-color: #4086b0;
+    
+    width: auto;
+    height: auto;
+    
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/***********************************************************************************
+  
+Typography
+  
+************************************************************************************/
+
+@font-face {
+    font-family: gotham-book;
+    src: url('../fonts/gotham-book.ttf')
+}
+
+@font-face {
+    font-family: gotham-light;
+    src: url('../fonts/gotham-light.ttf')
+}
+
+@font-face {
+    font-family: gotham-bold;
+    src: url('../fonts/gotham-bold.ttf')
+}
+
+body {
+    font-family: 'gotham-light', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, .85);
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+h1 strong {
+    font-size: 18px;
+}
+
+a {
+    color: rgba(255, 255, 255, .85);
+    text-decoration: none;
+    
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, .95);
+}
+
+strong {
+    font-family: 'gotham-bold', sans-serif;
+}
+
+/***********************************************************************************
+  
+Icons
+  
+************************************************************************************/
+
+@font-face {
+    font-family: 'ionicons';
+    src: url("../icons/ionicons.eot?v=1.4.1");
+    src: url("../icons/ionicons.eot?v=1.4.1#iefix") format("embedded-opentype"), url("../icons/ionicons.ttf?v=1.4.1") format("truetype"), url("../icons/ionicons.woff?v=1.4.1") format("woff"), url("../icons/ionicons.svg?v=1.4.1#Ionicons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    font-family: 'ionicons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon.close:before {
+    content: '\f12a';
+}
+
+.icon.paid:before {
+    content: '\f3fe';
+}
+
+.icon.error:before {
+    content: '\f405';
+}
+
+/***********************************************************************************
+  
+Universal Content Containers
+  
+************************************************************************************/
+
+.row {
+    width: 100%;
+    
+    float: left;
+    
+    position: relative;
+}
+
+.content {
+    width: -webkit-calc(100% - 200px);
+    width: -moz-calc(100% - 200px);
+    width: calc(100% - 200px);
+    
+    max-width: 700px;
+    
+    margin: 0px auto;
+    
+    position: relative;
+    
+    overflow: hidden;
+}
+
+.content.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.content img {
+    background-color: rgba(255, 255, 255, .075);
+    
+    border-radius: 50%;
+    
+    width: 100px;
+    height: 100px;
+    
+    display: inline-block;
+    
+    padding: 12px;
+}
+
+
+/***********************************************************************************
+  
+Buttons
+  
+************************************************************************************/
+
+.button {
+    border: none;
+    border-radius: 6px;
+    
+    font-family: 'gotham-light', sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .85);
+    
+    height: 50px;
+    
+    display: inline-block;
+    
+    padding: 0 20px;
+    
+    cursor: pointer;
+    
+    -webkit-font-smoothing: subpixel-antialiased;
+    
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+}
+
+.button:hover {
+    color: #ffffff;
+}
+
+.button:focus {
+    outline: none;
+}
+
+/***********************************************************************************
+  
+Branding
+  
+************************************************************************************/
+
+#brand .content {
+    text-align: center;
+}
+
+#brand .content img {
+    margin-bottom: 30px;
+}
+
+/***********************************************************************************
+  
+Invoice Intro
+  
+************************************************************************************/
+
+#invoice .content .intro {
+    border-bottom: 1px dashed rgba(255, 255, 255, .75);
+    
+    padding-bottom: 50px;
+    margin: 50px 0 53px;
+}
+
+#invoice .content .intro img {
+    position: absolute;
+    top: -17px;
+    right: 0;
+}
+
+/***********************************************************************************
+  
+Invoice Details & Status
+  
+************************************************************************************/
+
+#invoice .content .details {
+    margin-bottom: 39px;
+}
+
+#invoice .content .details .client,
+#invoice .content .details .status {
+    width: 50%;
+    
+    float: left;
+}
+
+#invoice .content .status {
+    text-align: right;
+}
+
+/***********************************************************************************
+  
+Invoice Titles
+  
+************************************************************************************/
+
+#invoice .content .title {
+    text-align: center;
+    
+    height: 30px;
+    
+    margin-bottom: 26px;
+    
+    overflow: hidden;
+}
+
+#invoice .content .title:after {
+    border-radius: 6px;
+    
+    border: 1px solid rgba(255, 255, 255, .75);
+    
+    width: 100%;
+    height: 30px;
+    
+    position: absolute;
+    top: 50%;
+    left: 0;
+    
+    z-index: -1;
+    
+    content: '';
+}
+
+#invoice .content .title h2 {
+    border-radius: 15px;
+    
+    border: 1px solid rgba(255, 255, 255, .75);
+    
+    background-color: #4086b0;
+    
+    font-size: 12px;
+    line-height: 30px;
+    text-transform: uppercase;
+    
+    height: 30px;
+    
+    display: inline-block;
+    
+    padding: 0 12px;
+}
+
+/***********************************************************************************
+  
+Invoice Items
+  
+************************************************************************************/
+
+#invoice .content .items {
+    font-size: 14px;
+    
+    margin-bottom: 45px;
+}
+
+#invoice .content .items:last-of-type {
+    margin-bottom: 160px;
+}
+
+#invoice.paid .content .items:last-of-type {
+    margin-bottom: 45px;
+}
+
+#invoice .content .items .item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    
+    padding: 15px 0 2px 0;
+}
+
+#invoice .content .items .item h3 {
+    width: 75%;
+    
+    float: left;
+    
+    position: relative;
+}
+
+#invoice .content .items .item h3 span.units {
+    border-radius: 9.5px;
+    background-color: rgba(255, 255, 255, .75);
+    font-size: 10px;
+    line-height: 20px;
+    color: #4387ae;
+    
+    height: 19px;
+    
+    position: absolute;
+    top: -1px;
+    
+    padding: 0 8px;
+    margin-left: 10px;
+}
+
+#invoice .content .items .item .amount,
+#invoice .content .items .item .subtotal,
+#invoice .content .items .item .tax,
+#invoice .content .items .item .total {
+    font-family: 'gotham-bold', sans-serif;
+    text-align: right;
+    
+    width: 25%;
+    
+    float: left;
+}
+
+/***********************************************************************************
+  
+Invoice Actions
+  
+************************************************************************************/
+
+#invoice .actions {
+    border: none;
+    background-color: rgba(255, 255, 255, .95);
+    
+    line-height: 50px;
+    color: #4387ae;
+    
+    width: 100%;
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#invoice .actions .content {
+    padding: 25px 0;
+}
+
+#invoice .actions .content .button {
+    background-color: #4387ae;
+    
+    float: right;
+}
+
+#invoice .actions .content h3 {
+    font-size: 18px;
+    text-align: center;
+    
+    width: 100%;
+}
+
+/***********************************************************************************
+  
+Panels
+  
+************************************************************************************/
+
+.panel,
+.processing {
+    background-color: #ffffff;
+    
+    color: rgba(0, 0, 0, 0.75);
+    
+    width: 100%;
+    height: 100%;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    
+    overflow: scroll;
+}
+
+/* Panel States */
+
+.panel.closed {
+    display: none;
+}
+
+.panel.opened {
+    display: block;
+}
+
+/* Processing */
+
+.processing {
+    background-color: rgba(255, 255, 255, .95);
+    
+    position: absolute;
+    
+    z-index: 30;
+    
+    display: none;
+}
+
+/* Close Button */
+
+.panel .close {
+    font-size: 22px;
+    line-height: 70px;
+    color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    
+    width: 70px;
+    height: 70px;
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.panel .close:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Panel Content */
+
+.panel .content h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    
+    margin-bottom: 24px;
+}
+
+.panel .content h2 strong {
+    font-size: 18px;
+}
+
+.panel .content p {
+    margin-bottom: 14px;
+}
+
+/***********************************************************************************
+  
+Panel Forms
+  
+************************************************************************************/
+
+.panel .content form {
+    float: left;
+}
+
+.panel .content form input[type="text"],
+.panel .content form input[type="email"] {
+    background: none;
+    
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+    
+    outline: none;
+    resize: none;
+    
+    font-family: 'gotham-light', sans-serif;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.75);
+    
+    width: 50%;
+    
+    float: left;
+    
+    padding: 16px 0 3px 0;
+    
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.panel .content form input[type="text"]:last-of-type {
+    margin-bottom: 40px;
+}
+
+.panel .content form .button {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/***********************************************************************************
+  
+Status Panels
+  
+************************************************************************************/
+
+.panel.status {
+    z-index: 15;
+}
+
+.panel.status .content {
+    text-align: center;
+}
+
+.panel.status .content .icon {
+    font-size: 100px;
+    
+    display: inline-block;
+}
+
+.panel.status .content h2 {
+    margin-bottom: 4px;
+}
+
+/***********************************************************************************
+  
+Universal Animation Classes
+  
+************************************************************************************/
+
+.animated {
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.fast {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+}
+
+.animated.slow {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+/* Fades */
+
+.fade-in {
+    -webkit-animation-name: fade-in;
+    animation-name: fade-in;
+}
+
+.fade-out {
+    -webkit-animation-name: fade-out;
+    animation-name: fade-out;
+}
+
+/* Zooms */
+
+.zoom-in {
+    -webkit-animation-name: zoom-in;
+    animation-name: zoom-in;
+}
+
+.zoom-out {
+    -webkit-animation-name: zoom-out;
+    animation-name: zoom-out;
+}
+
+/* Slides */
+
+.slide-in {
+    -webkit-animation-name: slide-in;
+    animation-name: slide-in;
+}
+
+.slide-out {
+    -webkit-animation-name: slide-out;
+    animation-name: slide-out;
+}
+
+/***********************************************************************************
+  
+Universal Animation Definitions
+  
+************************************************************************************/
+
+/* Fade In */
+
+@-webkit-keyframes fade-in{from{opacity:0}to{opacity:1}}
+@-moz-keyframes fade-in{from{opacity:0}to{opacity:1}}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
+
+/* Fade Out */
+
+@-webkit-keyframes fade-out{0%{opacity:1}100%{opacity:0}}
+@-moz-keyframes fade-out{0%{opacity:1}100%{opacity:0}}
+@keyframes fade-out{0%{opacity:1}100%{opacity:0}}
+
+/* Zoom In */
+
+@-webkit-keyframes zoom-in{0%{opacity:0;-webkit-transform:scale3d(0.3,.3,.3);transform:scale3d(0.3,.3,.3)}50%{opacity:1}}
+@-moz-keyframes zoom-in{0%{opacity:0;-webkit-transform:scale3d(0.3,.3,.3);transform:scale3d(0.3,.3,.3)}50%{opacity:1}}
+@keyframes zoom-in{0%{opacity:0;-webkit-transform:scale3d(0.3,.3,.3);transform:scale3d(0.3,.3,.3)}50%{opacity:1}}
+
+/* Zoom Out */
+
+@-webkit-keyframes zoom-out{0%{opacity:1}50%{opacity:0;-webkit-transform:scale3d(0.3,.3,.3);transform:scale3d(0.3,.3,.3)}100%{opacity:0}}
+@-moz-keyframes zoom-out{0%{opacity:1}50%{opacity:0;-webkit-transform:scale3d(0.3,.3,.3);transform:scale3d(0.3,.3,.3)}100%{opacity:0}}
+@keyframes zoom-out{0%{opacity:1}50%{opacity:0;-webkit-transform:scale3d(0.3,.3,.3);transform:scale3d(0.3,.3,.3)}100%{opacity:0}}
+
+/* Slide In */
+
+@-webkit-keyframes slide-in{0%{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);visibility:visible}100%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}
+@-moz-keyframes slide-in{0%{-moz-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);visibility:visible}100%{-moz-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}
+@keyframes slide-in{0%{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);visibility:visible}100%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}
+
+/* Slide Out */
+
+@-webkit-keyframes slide-out{0%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}100%{visibility:hidden;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}}
+@-moz-keyframes slide-out{0%{-moz-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}100%{visibility:hidden;-moz-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}}
+@keyframes slide-out{0%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}100%{visibility:hidden;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}}
+
+/* Loading */
+
+@-webkit-keyframes loading{from{opacity:.5;-webkit-transform:scale(0.75)}50%{opacity:1;-webkit-transform:scale(1)}to{opacity:.5;-webkit-transform:scale(0.75)}}
+@-moz-keyframes loading{from{opacity:.5;-moz-transform:scale(0.75)}50%{opacity:1;-moz-transform:scale(1)}to{opacity:.5;-moz-transform:scale(0.75)}}
+@keyframes loading{from{opacity:.5;transform:scale(0.75)}50%{opacity:1;transform:scale(1)}to{opacity:.5;transform:scale(0.75)}}

@@ -1,0 +1,136 @@
+
+/***********************************************************************************
+  
+Universal Content Containers
+  
+************************************************************************************/
+
+@media (max-width: 650px) {
+    .content {
+        width: -webkit-calc(100% - 100px);
+        width: -moz-calc(100% - 100px);
+        width: calc(100% - 100px);
+    }
+}
+
+@media (max-width: 550px) {
+    .content {
+        width: -webkit-calc(100% - 50px);
+        width: -moz-calc(100% - 50px);
+        width: calc(100% - 50px);
+    }
+}
+
+/***********************************************************************************
+  
+Invoice Intro
+  
+************************************************************************************/
+
+@media (max-width: 450px) {
+    #invoice .content .intro {
+        text-align: center;
+        padding-top: 15px;
+    }
+    
+    #invoice .content .intro img {
+        position: relative;
+        
+        display: inline-block;
+    }
+}
+
+/***********************************************************************************
+  
+Invoice Details & Status
+  
+************************************************************************************/
+
+@media (max-width: 450px) {
+    #invoice .content .details .client,
+    #invoice .content .details .status {
+        text-align: center;
+        
+        width: 100%;
+    }
+    
+    #invoice .content .details .client {
+        margin-bottom: 27px;
+    }
+    
+    #invoice .content .status {
+        text-align: left;
+    }
+}
+
+/***********************************************************************************
+  
+Invoice Items
+  
+************************************************************************************/
+
+@media (max-width: 500px) {
+    #invoice .content .items .item h3 span.units {
+        display: none;
+    }
+    
+    #invoice .content .items .item h3 {
+        width: 70%;
+    }
+    
+    #invoice .content .items .item .amount,
+    #invoice .content .items .item .subtotal,
+    #invoice .content .items .item .tax,
+    #invoice .content .items .item .total {
+        width: 30%;
+    }
+}
+
+/***********************************************************************************
+  
+Invoice Actions
+  
+************************************************************************************/
+
+@media (max-width: 500px) {
+    #invoice .actions .content span {
+        display: none;
+    }
+    
+    #invoice .actions .content .button {
+        text-align: center;
+        
+        width: 100%;
+        
+        float: left;
+    }
+}
+
+/***********************************************************************************
+  
+Panels
+  
+************************************************************************************/
+
+@media (max-width: 450px) {
+    .panel .content {
+        text-align: center;
+    }
+    
+    #order.panel .content p {
+        display: none;
+    }
+}
+
+/***********************************************************************************
+  
+Panel Forms
+  
+************************************************************************************/
+
+@media (max-width: 450px) {
+    .panel .content form input[type="text"],
+    .panel .content form input[type="email"] {
+        width: 100%;
+    }
+}
